@@ -44,7 +44,7 @@ end
 post "/logout" do
 
   session["user_id"] = nil
-  redirect "/"
+  redirect "/login"
 end
 
 get "/users/create-account" do
