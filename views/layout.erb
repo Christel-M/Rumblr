@@ -9,8 +9,10 @@
   <body>
     <%if session['user_id'] != nil %>
     <div class="sidenav">
-      <p><a class="primary-btn" href="/articles/">Dashboard</a></p>
+      <p><a class="primary-btn" href="/articles/">Home</a></p>
+      <p><a class="primary-btn" href="/dashboard">Dashboard</a></p>
       <p><a class="primary-btn" href="/articles/create-article">Create a Post</a></p>
+      <p><a class="primary-btn" href="/users/<%=session[:user_id]%>">View Profile</a></p>
       <p><form action="/logout" method="post">
         <input class="primary-btn" type="submit" name="logout" value="Logout">
       </form></p>

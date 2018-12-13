@@ -1,7 +1,9 @@
-<div class="container">
-  <div class="sub-container">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+<div>
+  <%@all_articles.reverse.each do |article|%>
+  <img src=<%= article.image%>>
+    <p>Title: <%= article.title%></p>
+    <p>Content: <%= article.content%></p>
+    <% user = User.find(article.user_id)%>
+    <p>Created By: <%=user.firstname%></p>
+    <%end%>
 </div>

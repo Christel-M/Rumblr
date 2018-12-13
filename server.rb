@@ -30,10 +30,13 @@ post "/users/login" do
   if user != nil
     if user.password == params["password"]
       session[:user_id] = user.id
-      redirect "/users/#{user.id}"
+      # redirect "/users/#{user.id}"
+      redirect "/dashboard"
+    else
+      redirect "/login"
     end
   else
-    redirect "/"
+    redirect "/users/create-account"
   end
 end
 
@@ -106,4 +109,10 @@ post "/articles/:id" do
   @article.destroy
 
   redirect "/articles/"
+end
+
+get "/dashboard" do
+  @all_articles = Article.last(20)
+
+  erb :dashboard
 end
