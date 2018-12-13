@@ -1,0 +1,169 @@
+body{
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  background-image: url("http://school298.spb.ru/images/500/DSC100553656.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: #f16f9d;
+}
+
+.center{
+  text-align: center;
+  justify-content: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.container{
+  display: inline-grid;
+  margin: 0;
+  width: 100%;
+}
+
+.sub-container{
+  width: 100%;
+  height: 35%;
+  padding-top: 10%;
+  display: inline-grid;
+  position: absolute;
+  grid-template: auto / repeat(3, 33.3%);
+}
+
+.topnav{
+  padding: 1.5%;
+  float: right;
+}
+
+.sub-container div:nth-child(2){
+  padding: 5%;
+  border: 3px solid #570d65;
+  border-radius: 6px;
+  box-shadow: 5px 8px 3px #000000;
+}
+
+.primary-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  background-color: #955ccd;
+  border:2px solid #955ccd;
+  color:#ffffff;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 0.4s
+}
+.primary-btn:hover{
+  border:2px solid #955ccd;
+  background-color: #ffffff;
+  color:#955ccd;
+}
+
+.secondary-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #955ccd;
+  background-color: #ffffff;
+  color:#955ccd;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 0.4s
+}
+.secondary-btn:hover{
+  border:2px solid #955ccd;
+  background-color: #955ccd;
+  color:#ffffff;
+}
+
+.white-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 10px;
+  background-color: #ffffff;
+  color:#955ccd;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 0.4s
+}
+.white-btn:hover{
+  background-color: #955ccd;
+  color: #ffffff;
+}
+
+.animate-top{
+  position: relative;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:1}
+  to {top:0; opacity:1}
+}
+
+.animate-down{
+  position: relative;
+  animation-name: animatedown;
+  animation-duration: 0.4s;
+}
+@keyframes animatedown {
+  from {top:300px; opacity:1}
+  to {top:0; opacity:1}
+}
+
+.footer{
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  background-color: #f16f9d;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer li {
+  display: inline;
+  padding: 6px 23px;
+}
+
+.footer li a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #000000;
+}
+
+.footer li a:hover{
+  color: #570d65;
+}
+
+.modal{
+  position: relative;
+  background-color: #ffffff;
+  margin: auto;
+  width: 640px;
+  height: 640px;
+  top: 50px;
+  bottom: 0;
+  padding: 2%;
+}
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #955ccd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+  height: 100px;
+  width: auto;
+}

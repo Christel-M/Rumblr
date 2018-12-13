@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="sub-container">
+    <div></div>
+    <div class="center">
+      <h1>Account</h1>
+
+      <p><strong>Full Name: </strong><%=@user.lastname%>, <%=@user.firstname%></p>
+      <p><strong>Email: </strong><%=@user.email%></p>
+      <p><strong>DOB: </strong><%=@user.dob%></p>
+    </div>
+    <div>
+      <form action="/users/<%=@user.id%>" method="post">
+          <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
+        </form>
+    </div>
+  </div>
+</div>
