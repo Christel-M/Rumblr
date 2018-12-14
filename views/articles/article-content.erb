@@ -7,7 +7,7 @@
       <span>Created: <%=@article.created_at%> |</span>
       <span>| Updated: <%=@article.updated_at%></span>
       <p>
-        <a class="secondary-btn" href="/articles/<%=@article.id%>">Edit Article</a>
+        <!-- <a class="secondary-btn" href="/articles/<%=@article.id%>">Edit Article</a> -->
         <form action="<%=@article.id%>" method="post">
           <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
         </form>
