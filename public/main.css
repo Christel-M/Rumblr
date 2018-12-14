@@ -53,36 +53,10 @@ h1{
   height: 70px;
   transform: scaleX(-1);
 }
-.sidenav {
-  height: 100%;
-  width: 260px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border-right: 3px solid #ffffff;
-  background-color: rgb(30, 30, 30);
-  overflow-x: hidden;
-  padding-top: 10%;
-}
-
-.sidenav a {
-  font-family: 'Raleway', sans-serif;
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: #ffffff;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #0085b6;
-}
-
 .navbar{
   width: 100%;
   padding: 1%;
-  background-color: rgba(30, 30, 30, 0.8);
+  background-color: rgba(30, 30, 30, 0.9);
   text-align: center;
   position: fixed;
   z-index: 1;
@@ -131,7 +105,7 @@ h1{
 
 .sub-container div:nth-child(2){
   padding: 5%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway' , sans-serif;
   background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   border: 3px solid #0085b6;
@@ -140,10 +114,12 @@ h1{
 }
 
 .article-grid{
+  font-family: 'Raleway' , sans-serif;
   display: inline-grid;
   grid-template: 700px / 700px;
   grid-gap: 5%;
-  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: rgba(30, 30, 30, 0.8);
+  padding-bottom: 10%;
 }
 
 .article-subgrid{
@@ -156,11 +132,16 @@ h1{
 .articleimg{
   width: 100%;
   height: 100%;
+  top: 0;
+  bottom: 0;
 }
 
 .article{
-  background-color: #0085b6;
+  /* background-color: rgba(250, 250, 250, 0.1); */
+  font-family: 'Raleway' , sans-serif;
+  color: #ffffff;
   margin: 0;
+  padding-bottom: 2%;
 }
 
 
@@ -239,12 +220,6 @@ h1{
   width: 100%;
 }
 
-/* img {
-  height: 100px;
-  width: auto;
-} */
-
-
 /********************* buttons ***************/
 
 .primary-btn{
@@ -281,21 +256,6 @@ h1{
   border:2px solid #00d49d;
   color: #ffffff;
   background-color: #48d5b0;
-}
-
-.white-btn{
-  display:inline-block;
-  position:relative;
-  padding:10px 10px;
-  background-color: #ffffff;
-  color:#955ccd;
-  font-size:1.1em;
-  text-decoration:none;
-  transition: color 0.4s
-}
-.white-btn:hover{
-  background-color: #955ccd;
-  color: #ffffff;
 }
 
 /**********************forms****************/

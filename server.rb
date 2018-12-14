@@ -80,6 +80,11 @@ post "/users/:id" do
   redirect "/"
 end
 
+get "/users/:id" do
+  @user = User.update_all(session['user_id'])
+  redirect "/users/edit-account"
+end
+
 ####################Article##############################
 get "/articles/create-article" do
   if session['user_id'] == nil
@@ -100,8 +105,8 @@ get "/articles/:id" do
 end
 
 get "/articles/?" do
-  @article = Article.all
-  # @article = Article.last(20)
+  # @article = Article.all
+  @article = Article.last(20)
   erb :"/articles/articles-page"
 end
 

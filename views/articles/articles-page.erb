@@ -1,34 +1,34 @@
 <div class="main-container animate-down center">
-<%if @article.count == 0 %>
-  <div class="article-subgrid">
-    <h1>There are no posts</h1>
-    <a class="primary-btn" href="/articles/create-article">Create Post</a>
-  </div>
 
-  <% else %>
-
-<div class="container center">
-    <%@article.reverse.each do |art|%>
-    <%if art.user_id == session['user_id']%>
+    <% @article.reverse.each do |art| %>
+    <%if art.user_id == session["user_id"]%>
     <div class="article-grid">
-      <img class="articleimg" src=<%= art.image%>>
-    <div class="article">
-    <p>Title: <%= art.title%></p>
-    <p>Content: <%= art.content%></p>
-    <span>
-      <form action="<%=art.id%>" method="post">
-        <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
-      </form>
-    </span>
-    <span>
-      <form action="/" method="GET">
-        <input class="secondary-btn" type="submit" name="delete" value="Edit Article">
-      </form>
-    </span>
-    <%end%>
-  </div>
-</div>
-    <%end%>
-  </div>
-  <% end %>
+      <img class="articleimg" src="<%= art.image%>">
+      <div class="article">
+        <h4>Title: <%= art.title%></h4>
+        <p>Content: <%= art.content%></p>
+        <p>
+          <form action="<%=art.id%>" method="post">
+            <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
+          </form>
+        </p>
+        <a class="secondary-btn" href="/articles/<%=art.id%>">Edit Article</a>
+      </div>
+
+    </div>
+    <% end %>
+
+
+    <% end %>
+
+    <%user_articles = Article.where(user_id: session[:user_id])%>
+
+    <% if user_articles.empty? %>
+    <div class="article-subgrid">
+      <h1>There are no posts</h1>
+      <a class="primary-btn" href="/articles/create-article">Create Post</a>
+    </div>
+    <% end %>
+
+
 </div>
