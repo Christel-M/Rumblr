@@ -3,7 +3,11 @@ require "sinatra/activerecord"
 
 enable :sessions
 
-set :database, {adapter: "sqlite3", database: "rumblr.sqlite3"}
+if ENV['RACK_ENV']
+  ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
+else
+  set :database, {adapter: "sqlite3", database: "rumblr.sqlite3"}
+end
 
 class User < ActiveRecord::Base
   has_many :article
@@ -44,7 +48,7 @@ end
 post "/logout" do
 
   session["user_id"] = nil
-  redirect "/login"
+  redirect "/"
 end
 
 get "/users/create-account" do
@@ -80,11 +84,6 @@ post "/users/:id" do
   redirect "/"
 end
 
-get "/users/:id" do
-  @user = User.update_all(session['user_id'])
-  redirect "/users/edit-account"
-end
-
 ####################Article##############################
 get "/articles/create-article" do
   if session['user_id'] == nil
@@ -105,13 +104,12 @@ get "/articles/:id" do
 end
 
 get "/articles/?" do
-  # @article = Article.all
-  @article = Article.last(20)
+  @article = Article.all
   erb :"/articles/articles-page"
 end
 
 post "/articles/:id" do
-  @article = Article.find(params["id"])
+  @article =  Article.find(params["id"])
   @article.destroy
 
   redirect "/articles/"
