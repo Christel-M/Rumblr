@@ -9,27 +9,24 @@
 <body>
 
 <%if session['user_id'] != nil %>
-  <div class="topnav logo">
-    <a href="/articles/">
+  <div class="navbar">
+    <a href="/dashboard">
       <img src="https://www.misskatecuttables.com/uploads/shopping_cart/7936/large_cute-puppy.png">
     </a>
-  </div>
-  <div class="sidenav">
-    <p><a class="primary-btn" href="/articles/">Home</a></p>
-    <p><a class="primary-btn" href="/dashboard">Dashboard</a></p>
-    <p><a class="primary-btn" href="/articles/create-article">Create a Post</a></p>
-    <p><a class="primary-btn" href="/users/<%=session[:user_id]%>">View Profile</a></p>
-    <p><form action="/logout" method="post">
-      <input class="primary-btn" type="submit" name="logout" value="Logout">
-    </form></p>
+    <a href="/dashboard">Home</a>
+    <a href="/articles/">My Dashboard</a>
+    <a href="/articles/create-article">Create a Post</a>
+    <a href="/users/<%=session[:user_id]%>">View Profile</a>
   </div>
 <%else%>
   <a class="logo" href="/">
     <img src="https://www.misskatecuttables.com/uploads/shopping_cart/7936/large_cute-puppy.png">
+    The Daily Pupper
   </a>
 <%end%>
 
 <%=yield%>
+
 
   <!-- <div class="footer">
     <ul class="center">
