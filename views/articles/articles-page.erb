@@ -1,5 +1,6 @@
 <div class="main-container animate-down center">
 
+  <div class="container center">
     <% @article.reverse.each do |art| %>
     <%if art.user_id == session["user_id"]%>
     <div class="article-grid">
@@ -17,18 +18,19 @@
 
     </div>
     <% end %>
+  </div>
 
 
-    <% end %>
+  <% end %>
 
-    <%user_articles = Article.where(user_id: session[:user_id])%>
+  <%user_articles = Article.where(user_id: session[:user_id])%>
 
-    <% if user_articles.empty? %>
-    <div class="article-subgrid">
-      <h1>There are no posts</h1>
-      <a class="primary-btn" href="/articles/create-article">Create Post</a>
-    </div>
-    <% end %>
+  <% if user_articles.empty? %>
+  <div class="article-subgrid">
+    <h1>There are no posts</h1>
+    <a class="primary-btn" href="/articles/create-article">Create Post</a>
+  </div>
+  <% end %>
 
 
 </div>
