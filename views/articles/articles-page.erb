@@ -26,9 +26,11 @@
   <%user_articles = Article.where(user_id: session[:user_id])%>
 
   <% if user_articles.empty? %>
+  <div class="container center">
   <div class="article-subgrid">
     <h1>There are no posts</h1>
     <a class="primary-btn" href="/articles/create-article">Create Post</a>
+  </div>
   </div>
   <% end %>
 
