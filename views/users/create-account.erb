@@ -1,5 +1,5 @@
-<div class="topnav animate-top">
-  <a class="white-btn" href="/login">Log In</a>
+<div class="homenav animate-top">
+  <a class="primary-btn" href="/login">Log In</a>
 </div>
 
 <div class="container center">
@@ -7,13 +7,15 @@
     <div></div>
     <div class="animate-down">
       <h1>Create Account</h1>
-      <form class="create-account" action="/users/create-account" method="post">
-        <input type="text" name="firstname" value="" placeholder="First Name" required>
+      <form action="/users/create-account" method="post">
+        <input type="text" name="firstname" value="" placeholder="First Name" required> <br>
         <input type="text" name="lastname" value="" placeholder="Last Name" required> <br>
         <input type="email" name="email" value="" placeholder="Email Address" required> <br>
         <input type="password" name="password" value="" placeholder="Password" required> <br>
-        <input type="date" name="dob" value=""> <br>
+        <input type="date" name="dob" value="">
+        <br><br>
         <input type="submit" name="submit" value="Create Account">
+        <input type="reset" value="Reset">
       </form>
     </div>
     <div></div>

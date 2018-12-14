@@ -1,15 +1,13 @@
-<div class="container center">
-  <div class="sub-container">
-    <div></div>
+<div class="main-container center">
+  <div class="container">
     <div class="animate-down">
       <h1>Write Post</h1>
-      <form class="create-account" action="/articles/create-article" method="post">
+      <form class="create-account" action="/articles/create-article" method="POST">
         <input type="text" name="title" value="" placeholder="Title Name" required>
-        <textarea name="content" rows="8" cols="80" placeholder="Write your blog here..."></textarea>
-        <input type="text" name="image" value="" placeholder="Image URL"> <br>
+        <textarea name="content" rows="30" cols="20" placeholder="Write your blog here..."></textarea>
+        <input type="text" name="image" value="" placeholder="Paste your image/gif/video URL here..." required> <br>
         <input type="submit" name="submit" value="Create Post">
       </form>
     </div>
-    <div></div>
   </div>
 </div>

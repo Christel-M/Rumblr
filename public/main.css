@@ -1,11 +1,18 @@
 body{
   margin: 0;
-  font-family: 'Roboto Slab', serif;
-  background-image: url("https://mysweetpuppy.net/wp-content/uploads/2016/09/best-dog-food-for-pitbull-puppy.jpg");
+  font-family: 'Righteous', cursive;
+  /* background-image: url("https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-color: rgba(0, 0, 0, 0.2); */
+  background-color: rgb(0, 0, 0);
+  /* color: rgb(255, 255, 255); */
+  color: black;
+  /* background-blend-mode: overlay;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-color: #ffffff;
+  height: 100%; */
+}
+
+h1{
+  color: white;
 }
 
 .center{
@@ -17,83 +24,128 @@ body{
   display: none;
 }
 
+.homenav{
+  padding-top: 4%;
+  padding-bottom: 1.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  float: right;
+}
+
+.logo {
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  float: left;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.logo:hover{
+  color: #0085b6;
+}
+
+.logo img{
+  height: 70px;
+  transform: scaleX(-1);
+}
+.navbar{
+  width: 100%;
+  padding: 1%;
+  background-color: rgba(30, 30, 30, 0.9);
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar img{
+  height: 50px;
+  transform: scaleX(-1);
+}
+
+.navbar a {
+  padding-left: 2%;
+  padding-right: 2%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.navbar a:hover{
+  color: #00d49d;
+}
+
 .container{
   display: inline-grid;
   margin: 0;
   width: 100%;
 }
 
+.main-container{
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  padding-top: 7%;
+}
+
 .sub-container{
   width: 100%;
   height: 35%;
-  /* padding-top: 5%; */
+  padding-top: 3%;
   display: inline-grid;
   position: absolute;
   grid-template: auto / repeat(3, 33.3%);
 }
 
-.topnav{
-  padding: 1.5%;
-  float: right;
-}
-
 .sub-container div:nth-child(2){
   padding: 5%;
-  background-color: rgba(250, 250, 250, 0.5);
-  border: 3px solid #570d65;
+  font-family: 'Raleway' , sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  border: 3px solid #0085b6;
   border-radius: 6px;
   box-shadow: 5px 8px 3px #000000;
 }
 
-.primary-btn{
-  display:inline-block;
-  position:relative;
-  padding:10px 20px;
-  background-color: #955ccd;
-  border:2px solid #955ccd;
-  color:#ffffff;
-  font-size:1.1em;
-  text-decoration:none;
-  transition: color 0.4s
-}
-.primary-btn:hover{
-  border:2px solid #955ccd;
-  background-color: #ffffff;
-  color:#955ccd;
+.article-grid{
+  font-family: 'Raleway' , sans-serif;
+  display: inline-grid;
+  grid-template: 700px / 700px;
+  grid-gap: 5%;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding-bottom: 10%;
 }
 
-.secondary-btn{
-  display:inline-block;
-  position:relative;
-  padding:10px 20px;
-  border:2px solid #955ccd;
-  background-color: #ffffff;
-  color:#955ccd;
-  font-size:1.1em;
-  text-decoration:none;
-  transition: color 0.4s
-}
-.secondary-btn:hover{
-  border:2px solid #955ccd;
-  background-color: #955ccd;
-  color:#ffffff;
+.article-subgrid{
+  display: inline-grid;
+  grid-template: 650px / 650px;
+  background-image: url("https://images.unsplash.com/photo-1538665120611-ec2a6edcb109?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80");
+  background-size: cover;
 }
 
-.white-btn{
-  display:inline-block;
-  position:relative;
-  padding:10px 10px;
-  background-color: #ffffff;
-  color:#955ccd;
-  font-size:1.1em;
-  text-decoration:none;
-  transition: color 0.4s
+.articleimg{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
 }
-.white-btn:hover{
-  background-color: #955ccd;
+
+.article{
+  /* background-color: rgba(250, 250, 250, 0.1); */
+  font-family: 'Raleway' , sans-serif;
   color: #ffffff;
+  margin: 0;
+  padding-bottom: 2%;
 }
 
+
+/******************** Animation *********/
 .animate-top{
   position: relative;
   animation-name: animatetop;
@@ -164,7 +216,79 @@ body{
     cursor: pointer;
 }
 
-img {
-  height: 100px;
-  width: auto;
+.sideimg img{
+  width: 100%;
+}
+
+/********************* buttons ***************/
+
+.primary-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #0085b6;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  color:#ffffff;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 3s
+}
+.primary-btn:hover{
+  border:2px solid #0085b6;
+  color: #ffffff;
+  background-color: #2b9fca;
+}
+
+.secondary-btn{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #00d49d;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  color:#ffffff;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 3s
+}
+.secondary-btn:hover{
+  border:2px solid #00d49d;
+  color: #ffffff;
+  background-color: #48d5b0;
+}
+
+/**********************forms****************/
+input[type=text], input[type=email], input[type=password], input[type=date]{
+  width: 70%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 70%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input[type=submit], input[type="reset"] {
+  display:inline-block;
+  background-color: rgba(0,0,0,0);
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #0c9cd1;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  color:#ffffff;
+  font-size:1.1em;
+  text-decoration:none;
+  transition: color 3s
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+  border:2px solid #0c9cd1;
+  color: #ffffff;
+  background-color: #2eb3e4;
 }

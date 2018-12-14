@@ -1,11 +1,17 @@
-<div>
-  <img src= <%= @article.image%>>
-    <p>Title: <%= @article.title%></p>
-    <p>Content: <%= @article.content%></p>
-    <p>
-      <form action="<%=@article.id%>" method="post">
+<div class="main-container animate-top center">
+  <div class="article-grid">
+      <img class="articleimg" src="<%= @article.image%>">
+      <div class="article">
+      <p>Title: <%= @article.title%></p>
+      <p>Content: <%= @article.content%></p>
+      <span>Created: <%=@article.created_at%> |</span>
+      <span>| Updated: <%=@article.updated_at%></span>
+      <p>
+        <a class="secondary-btn" href="/articles/<%=@article.id%>">Edit Article</a>
+        <form action="<%=@article.id%>" method="post">
           <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
         </form>
-    </p>
-
+      </p>
+    </div>
+  </div>
 </div>

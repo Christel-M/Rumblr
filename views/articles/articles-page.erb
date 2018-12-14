@@ -1,15 +1,36 @@
-<h2>My Posts</h2>
-<div>
-  <%@article.each do |art|%>
-  <img src= <%= art.image%>>
-  <p>Title: <%= art.title%></p>
-  <p>Content: <%= art.content%></p>
-  <p>
-  <%if art.user_id == session['user_id']%>
-    <form action=<%=art.id%> method="post">
-      <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
-    </form>
-    <%end%>
-  </p>
-  <%end%>
+<div class="main-container animate-down center">
+
+  <div class="container center">
+    <% @article.reverse.each do |art| %>
+    <%if art.user_id == session["user_id"]%>
+    <div class="article-grid">
+      <img class="articleimg" src="<%= art.image%>">
+      <div class="article">
+        <h4>Title: <%= art.title%></h4>
+        <p>Content: <%= art.content%></p>
+        <p>
+          <form action="<%=art.id%>" method="post">
+            <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">
+          </form>
+        </p>
+        <a class="secondary-btn" href="/articles/<%=art.id%>">Edit Article</a>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+
+
+  <% end %>
+
+  <%user_articles = Article.where(user_id: session[:user_id])%>
+
+  <% if user_articles.empty? %>
+  <div class="article-subgrid">
+    <h1>There are no posts</h1>
+    <a class="primary-btn" href="/articles/create-article">Create Post</a>
+  </div>
+  <% end %>
+
+
 </div>
