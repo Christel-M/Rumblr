@@ -1,14 +1,21 @@
 body{
   margin: 0;
   font-family: 'Righteous', cursive;
-  /* background-image: url("https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
-  background-color: rgba(0, 0, 0, 0.2); */
   background-color: rgb(0, 0, 0);
-  /* color: rgb(255, 255, 255); */
-  color: black;
-  /* background-blend-mode: overlay;
+  color: rgb(255, 255, 255);
   background-size: cover;
-  height: 100%; */
+  height: 100%;
+}
+
+#home{
+  margin: 0;
+  font-family: 'Righteous', cursive;
+  background-image: url("https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  background-blend-mode: overlay;
+  background-size: cover;
+  height: 100%;
 }
 
 h1{
