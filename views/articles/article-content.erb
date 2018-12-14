@@ -1,7 +1,9 @@
-<div>
-  <img src= <%= @article.image%>>
+<div class="container">
+  <img src="<%= @article.image%>">
     <p>Title: <%= @article.title%></p>
     <p>Content: <%= @article.content%></p>
+    <p>Created: <%=@article.created_at%></p>
+    <p>Updated: <%=@article.updated_at%></p>
     <p>
       <form action="<%=@article.id%>" method="post">
           <input class="primary-btn" type="submit" name="delete" value="Delete Article" onclick="alert('Article Deleted!')">

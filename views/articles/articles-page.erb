@@ -1,5 +1,5 @@
 <div class="main-container animate-down center">
-<%if @article.count <= 1 %>
+<%if @article.count == 0 %>
   <div class="article-subgrid">
     <h1>There are no posts</h1>
     <a class="primary-btn" href="/articles/create-article">Create Post</a>
