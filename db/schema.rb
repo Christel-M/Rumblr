@@ -17,6 +17,10 @@ ActiveRecord::Schema.define(version: 2018_12_11_222526) do
     t.text "content"
     t.string "image"
     t.integer "user_id"
+    t.boolean "published", default: false
+    t.datetime "published_on"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

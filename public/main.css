@@ -4,10 +4,15 @@ body{
   /* background-image: url("https://images.unsplash.com/photo-1526660690293-bcd32dc3b123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
   background-color: rgba(0, 0, 0, 0.2); */
   background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
+  color: black;
   /* background-blend-mode: overlay;
   background-size: cover;
   height: 100%; */
+}
+
+h1{
+  color: white;
 }
 
 .center{
@@ -77,7 +82,7 @@ body{
 .navbar{
   width: 100%;
   padding: 1%;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0.8);
   text-align: center;
   position: fixed;
   z-index: 1;
@@ -112,7 +117,7 @@ body{
   width: 100%;
   position: relative;
   z-index: 0;
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 .sub-container{
@@ -134,7 +139,32 @@ body{
   box-shadow: 5px 8px 3px #000000;
 }
 
+.article-grid{
+  display: inline-grid;
+  grid-template: 700px / 700px;
+  grid-gap: 5%;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+}
 
+.article-subgrid{
+  display: inline-grid;
+  grid-template: 650px / 650px;
+  background-image: url("https://images.unsplash.com/photo-1538665120611-ec2a6edcb109?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80");
+  background-size: cover;
+}
+
+.articleimg{
+  width: 100%;
+  height: 100%;
+}
+
+.article{
+  background-color: #0085b6;
+  margin: 0;
+}
+
+
+/******************** Animation *********/
 .animate-top{
   position: relative;
   animation-name: animatetop;
@@ -278,7 +308,6 @@ input[type=text], input[type=email], input[type=password], input[type=date]{
 
 textarea {
   width: 70%;
-  height: 150px;
   padding: 10px 15px;
   box-sizing: border-box;
   resize: none;

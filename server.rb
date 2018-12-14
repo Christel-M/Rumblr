@@ -101,11 +101,12 @@ end
 
 get "/articles/?" do
   @article = Article.all
+  # @article = Article.last(20)
   erb :"/articles/articles-page"
 end
 
 post "/articles/:id" do
-  @article =  Article.find(params["id"])
+  @article = Article.find(params["id"])
   @article.destroy
 
   redirect "/articles/"
