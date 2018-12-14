@@ -79,7 +79,8 @@ end
 
 post "/users/:id" do
   @user =  User.find(params["id"])
-  @user.destroy
+  # @user.destroy
+  # @all_articles.destroy
   session["user_id"] = nil
   redirect "/"
 end
@@ -116,7 +117,8 @@ post "/articles/:id" do
 end
 
 get "/dashboard" do
-  @all_articles = Article.last(20)
+  # @all_articles = Article.last(20)
+  @all_articles = Article.all
 
   erb :dashboard
 end
