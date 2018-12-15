@@ -91,6 +91,7 @@ h1{
   display: inline-grid;
   margin: 0;
   width: 100%;
+  height: auto;
 }
 
 .main-container{

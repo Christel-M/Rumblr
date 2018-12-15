@@ -105,7 +105,7 @@ get "/articles/:id" do
 end
 
 get "/articles/?" do
-  @article = Article.all
+  @article = Article.last(20)
   erb :"/articles/articles-page"
 end
 

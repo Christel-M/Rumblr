@@ -3,8 +3,8 @@
   <div class="container center">
     <% @article.reverse.each do |art| %>
     <%if art.user_id == session["user_id"]%>
-    <div class="article-grid">
-      <img class="articleimg" src="<%= art.image%>">
+    <div class="article-grid center">
+      <img class="articleimg center" src="<%= art.image%>">
       <div class="article">
         <h4>Title: <%= art.title%></h4>
         <p>Content: <%= art.content%></p>
@@ -18,10 +18,10 @@
 
     </div>
     <% end %>
+    <% end %>
   </div>
 
 
-  <% end %>
 
   <%user_articles = Article.where(user_id: session[:user_id])%>
 
