@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_222526) do
+ActiveRecord::Schema.define(version: 2018_12_15_003116) do
 
   create_table "articles", force: :cascade do |t|
+    t.integer "user_id"
     t.string "title"
     t.text "content"
     t.string "image"
-    t.integer "user_id"
-    t.boolean "published", default: false
-    t.datetime "published_on"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "hashtags"
+    t.datetime "created_at"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

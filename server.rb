@@ -15,6 +15,7 @@ end
 
 class Article < ActiveRecord::Base
   belongs_to :user
+  serialize :hashtags,Array
 end
 
 get "/" do
@@ -93,7 +94,7 @@ get "/articles/create-article" do
 end
 
 post "/articles/create-article" do
-  @article = Article.new(title: params[:title], content: params[:content], image: params[:image], user_id: session[:user_id])
+  @article = Article.new(title: params[:title], content: params[:content], image: params[:image], hashtags: params[:hashtags], created_at: params[:time], user_id: session[:user_id])
   @article.save
   redirect "/articles/#{@article.id}"
 end
