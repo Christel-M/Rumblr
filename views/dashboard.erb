@@ -11,7 +11,7 @@
     <div class="container center">
     <%@all_articles.reverse.each do |article|%>
     <div class="article-grid">
-      <img class="articleimg" src=<%= article.image%>>
+      <img class="articleimg" src="<%= article.image%>">
       <div class="article">
       <h3><%= article.title%></h3>
       <% user = User.find(article.user_id)%>

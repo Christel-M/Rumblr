@@ -10,7 +10,7 @@ else
 end
 
 class User < ActiveRecord::Base
-  has_many :article
+  has_many :article, dependent: :destroy
 end
 
 class Article < ActiveRecord::Base
@@ -117,8 +117,7 @@ post "/articles/:id" do
 end
 
 get "/dashboard" do
-  # @all_articles = Article.last(20)
-  @all_articles = Article.all
+  @all_articles = Article.last(20)
 
   erb :dashboard
 end
