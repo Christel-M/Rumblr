@@ -79,8 +79,7 @@ end
 
 post "/users/:id" do
   @user =  User.find(params["id"])
-  # @user.destroy
-  # @all_articles.destroy
+  @user.destroy
   session["user_id"] = nil
   redirect "/"
 end
